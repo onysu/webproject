@@ -10,7 +10,8 @@
   --dark-bg: #212529;
   --text-light: #212529;
   --text-dark: #f8f9fa;
-  --header1-height: 48px;
+  --header1-height: 37px;
+  /* --header1-height: 48px; */
   --header2-height: 70px;
 }
 
@@ -47,8 +48,8 @@ html {
   color: white;
   z-index: 1030;
   font-size: 0.875rem;
-  transition: transform 0.3s ease;
-  /* height: var(--header1-height); */
+  /* transition: transform 0.3zs ease; */
+  height: var(--header1-height);
 }
 
 .header-1.hidden {
@@ -69,14 +70,13 @@ html {
 /* ==================== Header 2 Styles ==================== */
 .header-2 {
   position: fixed;
-  top: 37px;
-  /* top: var(--header1-height); */
+  top: var(--header1-height);
   left: 0;
   right: 0;
   background-color: var(--bs-body-bg);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1029;
-  transition: top 0.3s ease, box-shadow 0.3s ease;
+  /* transition: top 0.3s ease, box-shadow 0.3s ease; */
   padding: 0.75rem 0;
   height: var(--header2-height);
 }
@@ -151,9 +151,8 @@ html {
 
 /* ==================== Hero Section ==================== */
 .hero-section {
-  /* position: relative; */
-  height: 100vh;
-  /* height: 600px; */
+  position: relative;
+  height: 600px;
   overflow: hidden;
 }
 
