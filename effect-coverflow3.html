@@ -20,7 +20,7 @@
       padding: 0;
     }
 
-    body {
+    .swiper-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -108,133 +108,135 @@
 <body class="d-flex align-items-center bg-body-tertiary">
   <div class="container">
 
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
+    <div class="swiper-container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="">
+            <div class="title">
+              <span>Administrator</span>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="">
-          <div class="title">
-            <span>Administrator</span>
-          </div>
-        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div> -->
-      <!-- <div class="swiper-button-next"></div> -->
-
-      <!-- If we need scrollbar -->
-      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
 
   </div>
-</body>
 
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<!-- Swiper JS -->
-<script src="assets/js/swiper-bundle.min.js"></script>
 
-<script>
-  var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    intialSlide: 2,
-    speed: 600,
-    preventClicks: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 80,
-      depth: 350,
-      modifier: 1,
-      slideShadows: true
-    },
-    on: {
-      click(event) {
-        swiper.slideTo(this.clickedIndex);
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 2,
+      speed: 600,
+      preventClicks: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 80,
+        depth: 600,
+        modifier: 1,
+        slideShadows: true
       },
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    loop: true
-    // navigation: {
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // },
-    // Keyboard: {
-    //   enable: true
-    // },
-    // mousewheel: {
-    //   thresholdDelta: 70
-    // },
-    // breakpoints: {
-    //   560: {
-    //     slidesPerView: 2.5
-    //   },
-    //   768: {
-    //     slidesPerView: 3
-    //   },
-    //   1024: {
-    //     slidesPerView: 3
-    //   }
-    // }
-  });
-</script>
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      keyboard: {
+        enabled: true
+      },
+      mousewheel: {
+        thresholdDelta: 70
+      },
+      breakpoints: {
+        560: {
+          slidesPerView: 2.5
+        },
+        768: {
+          slidesPerView: 3
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+  </script>
 
 </body>
 
