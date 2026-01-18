@@ -210,7 +210,7 @@ const employeeSwiper = new Swiper('.employee-slider', {
   loop: true,
   autoplay: {
     delay: 3000,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
   effect: 'coverflow',
   coverflowEffect: {
@@ -218,25 +218,25 @@ const employeeSwiper = new Swiper('.employee-slider', {
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: true
   },
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: true
   },
   breakpoints: {
     320: {
       slidesPerView: 1,
-      centeredSlides: true,
+      centeredSlides: true
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 20,
-      centeredSlides: true,
+      centeredSlides: true
     },
     1024: {
       slidesPerView: 1,
-      centeredSlides: true,
+      centeredSlides: true
     },
   },
 });

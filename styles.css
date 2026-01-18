@@ -178,6 +178,7 @@ html {
   position: relative;
   height: 600px;
   overflow: hidden;
+  /* top: -37px; */
 }
 
 .hero-bg-slider {
