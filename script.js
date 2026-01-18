@@ -145,7 +145,7 @@ window.addEventListener('scroll', function () {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   // Hide/show header-1 on scroll
-  if (scrollTop > 100) {
+  if (scrollTop > 37) {
     header1.classList.add('hidden');
     header2.classList.add('sticky');
   } else {

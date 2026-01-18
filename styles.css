@@ -48,7 +48,7 @@ html {
   z-index: 1030;
   font-size: 0.875rem;
   transition: transform 0.3s ease;
-  height: var(--header1-height);
+  /* height: var(--header1-height); */
 }
 
 .header-1.hidden {
@@ -69,7 +69,8 @@ html {
 /* ==================== Header 2 Styles ==================== */
 .header-2 {
   position: fixed;
-  top: var(--header1-height);
+  top: 37px;
+  /* top: var(--header1-height); */
   left: 0;
   right: 0;
   background-color: var(--bs-body-bg);
@@ -150,8 +151,9 @@ html {
 
 /* ==================== Hero Section ==================== */
 .hero-section {
-  position: relative;
-  height: 600px;
+  /* position: relative; */
+  height: 100vh;
+  /* height: 600px; */
   overflow: hidden;
 }
 
