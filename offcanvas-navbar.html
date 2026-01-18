@@ -233,6 +233,7 @@
     </ul>
   </div>
 
+  <!-- nav atas -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Offcanvas navbar</a>
@@ -273,7 +274,8 @@
       </div>
     </div>
   </nav>
-  <div class="nav-scroller bg-body shadow-sm">
+  <!-- nav-scroller -->
+  <!-- <div class="nav-scroller bg-body shadow-sm">
     <nav class="nav" aria-label="Secondary navigation">
       <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
       <a class="nav-link" href="#">
@@ -288,7 +290,45 @@
       <a class="nav-link" href="#">Link</a>
       <a class="nav-link" href="#">Link</a>
     </nav>
-  </div>
+  </div> -->
+
+
+  <nav class="bg-body-tertiary border-bottom">
+    <div class="container d-flex flex-wrap">
+
+      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
+      </ul>
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Login</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="py-3 mb-4 border-bottom">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">Double header</span>
+      </a>
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+    </div>
+  </header>
+
 
   <main class="container">
     <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
