@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Kantor Resmi</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header 1: Contact Info & Time -->
+    <div id="header-1" class="header-1">
+        <div class="container-fluid">
+            <div class="row align-items-center py-2">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <span class="me-3">
+                            <i class="bi bi-envelope"></i> info@kantor.go.id
+                        </span>
+                        <span>
+                            <i class="bi bi-telephone"></i> (021) 1234-5678
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="time-info">
+                        <span id="current-day"></span>
+                        <span class="mx-2">|</span>
+                        <span id="current-time"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header 2: Logo & Navigation (Sticky) -->
+    <nav id="header-2" class="header-2 navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-circle me-2">
+                    <i class="bi bi-building"></i>
+                </div>
+                <span class="office-name">Kantor Resmi</span>
+            </a>
+
+            <!-- Dark/Light Mode Toggle -->
+            <button class="btn btn-link theme-toggle d-lg-none" id="themeToggleMobile" type="button">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profil.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informasi.html">Informasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="struktur.html">Struktur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berita.html">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-link theme-toggle d-none d-lg-block" id="themeToggle" type="button">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Profil Kantor</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Profil</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Profil Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Gedung Kantor"
+                        class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Tentang Kami</h2>
+                    <p class="lead">
+                        Kantor Resmi adalah institusi pemerintah yang berkomitmen memberikan pelayanan terbaik
+                        untuk masyarakat Indonesia.
+                    </p>
+                    <p>
+                        Didirikan dengan visi menjadi lembaga pelayanan publik yang modern, profesional,
+                        dan berorientasi pada kepuasan masyarakat. Kami terus berinovasi dalam meningkatkan
+                        kualitas layanan melalui pemanfaatan teknologi dan pengembangan sumber daya manusia.
+                    </p>
+                    <p>
+                        Dengan tim yang berpengalaman dan kompeten, kami siap melayani berbagai kebutuhan
+                        masyarakat dengan cepat, tepat, dan transparan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visi Misi -->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-eye-fill"></i>
+                                </div>
+                                <h3 class="h4 mb-0">Visi</h3>
+                            </div>
+                            <p>
+                                Menjadi institusi pelayanan publik terdepan yang profesional, transparan,
+                                dan berorientasi pada kepuasan masyarakat dengan memanfaatkan teknologi digital
+                                untuk mencapai Indonesia yang lebih maju.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-bullseye"></i>
+                                </div>
+                                <h3 class="h4 mb-0">Misi</h3>
+                            </div>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Memberikan
+                                    pelayanan prima kepada masyarakat</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Meningkatkan
+                                    transparansi dan akuntabilitas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mengembangkan
+                                    SDM yang kompeten dan profesional</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Berinovasi
+                                    dalam sistem pelayanan digital</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Membangun kemitraan
+                                    strategis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nilai-nilai -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-5">Nilai-Nilai Kami</h2>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="value-icon mx-auto mb-3">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Integritas</h4>
+                        <p>Menjunjung tinggi kejujuran dan etika dalam setiap tindakan</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="value-icon mx-auto mb-3">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h4>Profesional</h4>
+                        <p>Bekerja dengan standar kualitas tinggi dan penuh dedikasi</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center">
+                        <div class="value-icon mx-auto mb-3">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h4>Kolaboratif</h4>
+                        <p>Membangun kerjasama untuk mencapai tujuan bersama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Kantor Resmi</h5>
+                    <p>Melayani dengan sepenuh hati untuk masyarakat Indonesia yang lebih baik.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Kontak</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i> Jakarta, Indonesia</p>
+                    <p><i class="bi bi-envelope me-2"></i> info@kantor.go.id</p>
+                    <p><i class="bi bi-telephone me-2"></i> (021) 1234-5678</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Link Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="profil.html" class="text-decoration-none">Tentang Kami</a></li>
+                        <li><a href="informasi.html" class="text-decoration-none">Informasi</a></li>
+                        <li><a href="berita.html" class="text-decoration-none">Berita</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Kantor Resmi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

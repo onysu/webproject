@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struktur Organisasi - Kantor Resmi</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="jquery-ui.min.css" />
+  <!-- Primitives CSS -->
+  <link rel="stylesheet" href="primitives.latest.css" />
+  <!-- JavaScript Libraries -->
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="primitives.min.js"></script>
+  <script src="primitives.jquery.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #orgChart {
+      min-height: 600px;
+      border: 1px solid #dee2e6;
+      border-radius: 15px;
+      background-color: var(--bs-body-bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-bs-theme="dark"] #orgChart {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .bp-item {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header 1: Contact Info & Time -->
+  <div id="header-1" class="header-1">
+    <div class="container-fluid">
+      <div class="row align-items-center py-2">
+        <div class="col-md-6">
+          <div class="contact-info">
+            <span class="me-3">
+              <i class="bi bi-envelope"></i> info@kantor.go.id
+            </span>
+            <span>
+              <i class="bi bi-telephone"></i> (021) 1234-5678
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="time-info">
+            <span id="current-day"></span>
+            <span class="mx-2">|</span>
+            <span id="current-time"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header 2: Logo & Navigation (Sticky) -->
+  <nav id="header-2" class="header-2 navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <div class="logo-circle me-2">
+          <i class="bi bi-building"></i>
+        </div>
+        <span class="office-name">Kantor Resmi</span>
+      </a>
+
+      <!-- Dark/Light Mode Toggle -->
+      <button class="btn btn-link theme-toggle d-lg-none" id="themeToggleMobile" type="button">
+        <i class="bi bi-moon-fill"></i>
+      </button>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="informasi.html">Informasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="struktur.html">Struktur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="berita.html">Berita</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-link theme-toggle d-none d-lg-block" id="themeToggle" type="button">
+              <i class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Struktur Organisasi</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Struktur</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Organization Chart with Primitives.js -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="section-title text-center mb-4">Bagan Organisasi Interaktif</h2>
+          <p class="text-center text-muted mb-4">
+            Klik pada setiap posisi untuk melihat detail informasi
+          </p>
+          <div id="orgChart"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Members Details -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <!-- Pimpinan -->
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h2 class="section-title">Pimpinan</h2>
+        </div>
+        <div class="col-md-6 offset-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Kepala Kantor" class="org-photo">
+            <h4>Dr. Ahmad Santoso, M.Si</h4>
+            <p class="position">Kepala Kantor</p>
+            <p class="email"><i class="bi bi-envelope me-2"></i>ahmad.santoso@kantor.go.id</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sekretariat -->
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h2 class="section-title">Sekretariat</h2>
+        </div>
+        <div class="col-md-6 offset-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sekretaris" class="org-photo">
+            <h4>Siti Nurhaliza, S.Kom</h4>
+            <p class="position">Sekretaris</p>
+            <p class="email"><i class="bi bi-envelope me-2"></i>siti.nurhaliza@kantor.go.id</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kepala Bagian -->
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h2 class="section-title">Kepala Bagian</h2>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Kepala Bagian Keuangan" class="org-photo">
+            <h4>Budi Hartono, S.E</h4>
+            <p class="position">Kepala Bagian Keuangan</p>
+            <p class="email"><i class="bi bi-envelope me-2"></i>budi.hartono@kantor.go.id</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Kepala Bagian SDM" class="org-photo">
+            <h4>Dewi Lestari, M.Pd</h4>
+            <p class="position">Kepala Bagian SDM</p>
+            <p class="email"><i class="bi bi-envelope me-2"></i>dewi.lestari@kantor.go.id</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Kepala Bagian Umum" class="org-photo">
+            <h4>Indra Gunawan, S.Sos</h4>
+            <p class="position">Kepala Bagian Umum</p>
+            <p class="email"><i class="bi bi-envelope me-2"></i>indra.gunawan@kantor.go.id</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Staf Ahli -->
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h2 class="section-title">Staf Ahli</h2>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Staf Ahli" class="org-photo">
+            <h4>Prof. Dr. Rahmat</h4>
+            <p class="position">Ahli Kebijakan Publik</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Staf Ahli" class="org-photo">
+            <h4>Dr. Linda Wijaya</h4>
+            <p class="position">Ahli Teknologi Informasi</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Staf Ahli" class="org-photo">
+            <h4>Dr. Eko Prasetyo</h4>
+            <p class="position">Ahli Hukum</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="org-card">
+            <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Staf Ahli" class="org-photo">
+            <h4>Dr. Maya Kusuma</h4>
+            <p class="position">Ahli Komunikasi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Kantor Resmi</h5>
+          <p>Melayani dengan sepenuh hati untuk masyarakat Indonesia yang lebih baik.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Kontak</h5>
+          <p><i class="bi bi-geo-alt me-2"></i> Jakarta, Indonesia</p>
+          <p><i class="bi bi-envelope me-2"></i> info@kantor.go.id</p>
+          <p><i class="bi bi-telephone me-2"></i> (021) 1234-5678</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="mb-3">Link Cepat</h5>
+          <ul class="list-unstyled">
+            <li><a href="profil.html" class="text-decoration-none">Tentang Kami</a></li>
+            <li><a href="informasi.html" class="text-decoration-none">Informasi</a></li>
+            <li><a href="berita.html" class="text-decoration-none">Berita</a></li>
+            <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2024 Kantor Resmi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery (Local) -->
+  <!-- <script src="jquery.js"></script> -->
+  <!-- jQuery UI (Local) -->
+  <!-- <script src="jquery-ui.min.js"></script> -->
+  <!-- Primitives JS Core Library (Local) - Required for jQuery plugin -->
+  <!-- <script src="primitives.min.js"></script> -->
+  <!-- Primitives JS optimized for jQuery (Local) -->
+  <!-- <script src="primitives.jquery.min.js"></script> -->
+  <script src="script.js"></script>
+  <script src="orgchart.js"></script>
+</body>
+
+</html>
