@@ -150,6 +150,29 @@ html {
   transform: rotate(20deg);
 }
 
+/* Mobile Theme Toggle - Pojok Bawah */
+#themeToggleMobile {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1025;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+#themeToggleMobile:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
 /* ==================== Hero Section ==================== */
 .hero-section {
   position: relative;
@@ -542,10 +565,34 @@ html {
 
   .navbar-nav {
     padding: 1rem 0;
+    align-items: flex-start !important;
   }
 
   .navbar-nav .nav-link {
     padding: 0.75rem 1rem;
+  }
+
+  /* Sembunyikan pemisah (vr) di dalam navbar saat mobile */
+  .navbar-nav .d-flex {
+    display: none !important;
+  }
+
+  /* Pastikan collapse navbar tersembunyi sampai diklik */
+  .navbar-collapse:not(.show) {
+    display: none;
+  }
+
+  /* Berikan background solid pada menu saat di-collapse */
+  .navbar-collapse {
+    background-color: var(--bs-body-bg);
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+    border-radius: 0 0 8px 8px;
+  }
+
+  [data-bs-theme="dark"] .navbar-collapse {
+    border-top-color: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -569,6 +616,21 @@ html {
   .employee-card img {
     width: 120px;
     height: 120px;
+  }
+
+  /* Sembunyikan header-1 di mobile, hanya tampilkan header-2 */
+  .header-1 {
+    display: none !important;
+  }
+
+  /* Sesuaikan padding-top body karena header-1 tidak ditampilkan */
+  body {
+    padding-top: var(--header2-height) !important;
+  }
+
+  /* Sesuaikan posisi header-2 karena header-1 sudah tersembunyi */
+  .header-2 {
+    top: 0 !important;
   }
 }
 
