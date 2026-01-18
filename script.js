@@ -212,6 +212,14 @@ const employeeSwiper = new Swiper('.employee-slider', {
     delay: 3000,
     disableOnInteraction: false,
   },
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -219,16 +227,66 @@ const employeeSwiper = new Swiper('.employee-slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 2,
       spaceBetween: 20,
+      centeredSlides: true,
     },
     1024: {
       slidesPerView: 1,
+      centeredSlides: true,
     },
   },
 });
+
+  var swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    intialSlide: 2,
+    speed: 600,
+    preventClicks: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 350,
+      modifier: 1,
+      slideShadows: true
+    },
+    on: {
+      click(event) {
+        swiper.slideTo(this.clickedIndex);
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    loop: true
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+    // Keyboard: {
+    //   enable: true
+    // },
+    // mousewheel: {
+    //   thresholdDelta: 70
+    // },
+    // breakpoints: {
+    //   560: {
+    //     slidesPerView: 2.5
+    //   },
+    //   768: {
+    //     slidesPerView: 3
+    //   },
+    //   1024: {
+    //     slidesPerView: 3
+    //   }
+    // }
+  });
 
 // ==================== Load Content Functions ====================
 function loadNews() {
