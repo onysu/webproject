@@ -104,14 +104,14 @@ html {
   font-size: 1.25rem;
 }
 
-.office-name {
+/* .office-name {
   font-weight: 700;
   font-size: 1.25rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
 .navbar-nav .nav-link {
   font-weight: 500;
@@ -600,7 +600,7 @@ html {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 4rem 0 2rem;
   color: white;
-  margin-top: calc(var(--header1-height) + var(--header2-height));
+  /* margin-top: calc(var(--header1-height) + var(--header2-height)); */
 }
 
 .page-header h1 {
