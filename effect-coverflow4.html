@@ -138,6 +138,16 @@
       user-select: none;
     }
 
+    .swiper-slide:not(.swiper-slide-active) .title {
+      opacity: 0;
+      transform: translate(-50%, 10%);
+    }
+
+    .swiper-slide-active .title {
+      opacity: 1;
+      transform: translate(-50%, -20%);
+    }
+
     .title {
       position: absolute;
       bottom: 5px;
