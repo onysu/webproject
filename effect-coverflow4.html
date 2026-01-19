@@ -158,6 +158,36 @@
     }
 
     .swiper-slide .card-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      min-height: 80px;
+      /* fleksibel */
+      padding: 12px 10px 14px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+      text-align: center;
+      color: #fff;
+
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+
+      line-height: 1.3;
+    }
+
+    /* .swiper-slide .card-body {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -175,7 +205,7 @@
       border-bottom-left-radius: inherit;
       border-bottom-right-radius: inherit;
       line-height: 1;
-    }
+    } */
 
     .swiper-slide .card-title {
       font-size: 1.1rem;
