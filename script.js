@@ -182,7 +182,7 @@ const employeeSwiper = new Swiper('.employee-slider', {
   loopedSlides: 9,
 
   autoplay: {
-    delay: 2500,
+    delay: 3500,
     disableOnInteraction: false,
     pauseOnMouseEnter: true // opsional tapi recommended
   },
