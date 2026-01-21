@@ -101,6 +101,7 @@ html {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   color: var(--bs-navbar-active-color) rgba(255, 255, 255, 1);
+  font-weight: 700;
 }
 
 /* .theme-toggle {
