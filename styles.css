@@ -706,7 +706,7 @@ html {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 4rem 0 2rem;
   color: white;
-  /* margin-top: calc(var(--header1-height) + var(--header2-height)); */
+  margin-top: calc(var(--header1-height) + var(--header2-height));
 }
 
 .page-header h1 {
