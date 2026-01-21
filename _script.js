@@ -156,6 +156,40 @@ window.addEventListener('scroll', function () {
   lastScrollTop = scrollTop;
 });
 
+// ==================== Dark/Light Mode Toggle ====================
+// const themeToggle = document.getElementById('themeToggle');
+// const themeToggleMobile = document.getElementById('themeToggleMobile');
+// const html = document.documentElement;
+
+// // Check for saved theme preference or default to 'light'
+// const currentTheme = localStorage.getItem('theme') || 'light';
+// html.setAttribute('data-bs-theme', currentTheme);
+// updateThemeIcon(currentTheme);
+
+// function toggleTheme() {
+//   const currentTheme = html.getAttribute('data-bs-theme');
+//   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+//   html.setAttribute('data-bs-theme', newTheme);
+//   localStorage.setItem('theme', newTheme);
+//   updateThemeIcon(newTheme);
+// }
+
+// function updateThemeIcon(theme) {
+//   const icon = theme === 'light' ? 'bi-moon-fill' : 'bi-sun-fill';
+//   const buttons = [themeToggle, themeToggleMobile];
+
+//   buttons.forEach(button => {
+//     if (button) {
+//       const iconElement = button.querySelector('i');
+//       iconElement.className = `bi ${icon}`;
+//     }
+//   });
+// }
+
+// themeToggle.addEventListener('click', toggleTheme);
+// themeToggleMobile.addEventListener('click', toggleTheme);
+
 // ==================== Swiper Initialization ====================
 // Hero Background Slider
 const heroBgSwiper = new Swiper('.hero-bg-slider', {
@@ -207,6 +241,41 @@ const employeeSwiper = new Swiper('.employee-slider', {
     enabled: true
   },
 });
+// const employeeSwiper = new Swiper('.employee-slider', {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: "auto",
+
+//   loop: true,
+//   loopedSlides: 9,
+
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true, // opsional tapi recommended
+//   },
+
+//   speed: 800,
+
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 80,
+//     depth: 800,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+
+//   mousewheel: false, // ⚠️ penting
+//   keyboard: {
+//     enabled: true,
+//   },
+// });
 
 // ==================== Load Content Functions ====================
 function loadNews() {

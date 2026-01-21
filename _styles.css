@@ -1,16 +1,37 @@
 /* ==================== CSS Variables ==================== */
 :root {
+  /* --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-bg: #f8f9fa;
+  --dark-bg: #212529;
+  --text-light: #212529;
+  --text-dark: #f8f9fa; */
   --header1-height: 33px;
   --header2-height: 70px;
 }
 
+/* Dark Mode Variables */
+/* [data-bs-theme="dark"] {
+  --light-bg: #1a1d20;
+  --text-light: #f8f9fa;
+} */
+
 /* ==================== General Styles ==================== */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding-top: calc(var(--header2-height));
-  /* padding-top: calc(var(--header1-height) + var(--header2-height)); */
-}
+  padding-top: calc(var(--header1-height) + var(--header2-height));
+} */
 
 html {
   scroll-behavior: smooth;
@@ -156,6 +177,7 @@ html {
   position: relative;
   height: 600px;
   overflow: hidden;
+  /* top: -37px; */
 }
 
 .hero-bg-slider {
@@ -233,6 +255,21 @@ html {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
+/* .kolom-konten-hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
+} */
+
+/* .hero-text h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+} */
+
 .motto-list {
   font-size: 1.1rem;
 }
@@ -241,6 +278,47 @@ html {
   display: flex;
   align-items: center;
 }
+
+/* Employee Slider */
+/* .employee-slider-container {
+  border-radius: 15px;
+  padding: 2rem;
+} */
+
+/* .employee-card {
+  text-align: center;
+  padding: 1.5rem;
+} */
+
+/* .employee-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  object-fit: cover;
+} */
+
+/* .employee-info h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+} */
+
+/* .employee-info p {
+  margin: 0;
+  opacity: 0.9;
+} */
+
+/* .swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+} */
 
 /* ==================== Section Styles ==================== */
 .section-news,
@@ -455,6 +533,10 @@ html {
   color: var(--text-dark);
 }
 
+/* [data-bs-theme="dark"] .footer {
+  background-color: #0d0f11;
+} */
+
 .footer h5 {
   font-weight: 700;
   margin-bottom: 1rem;
@@ -550,6 +632,10 @@ html {
     margin-top: 0.5rem;
     border-radius: 0 0 8px 8px;
   }
+
+  /* [data-bs-theme="dark"] .navbar-collapse {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  } */
 }
 
 @media (max-width: 767.98px) {
@@ -606,6 +692,17 @@ html {
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
+
+/* Dark Mode Transitions */
+/* [data-bs-theme="dark"] .news-card,
+[data-bs-theme="dark"] .gallery-card,
+[data-bs-theme="dark"] .video-card {
+  background-color: #1a1d20;
+} */
+
+/* [data-bs-theme="dark"] .employee-slider-container {
+  background: rgba(0, 0, 0, 0.3);
+} */
 
 /* ==================== Page Header ==================== */
 .page-header {
@@ -788,3 +885,29 @@ html {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: 2px solid transparent;
 }
+
+/* ==================== Dark Mode Adjustments ==================== */
+/* [data-bs-theme="dark"] .info-card,
+[data-bs-theme="dark"] .org-card {
+  background-color: #1a1d20;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #1a1d20;
+  color: var(--bs-body-color);
+}
+
+[data-bs-theme="dark"] .accordion-item {
+  background-color: #1a1d20;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .accordion-button {
+  background-color: #1a1d20;
+  color: var(--bs-body-color);
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: #2a2d30;
+  color: var(--bs-body-color);
+} */
