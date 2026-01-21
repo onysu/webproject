@@ -350,9 +350,9 @@ html {
   }
 }
 
-.employee-slider .swiper-slide:not(.swiper-slide-active) .card {
+/* .employee-slider .swiper-slide:not(.swiper-slide-active) .card {
   opacity: 0.65;
-}
+} */
 
 .employee-slider .swiper-slide .card-title {
   font-size: 1.1rem;
