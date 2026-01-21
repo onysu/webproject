@@ -620,7 +620,7 @@
       </div>
       <hr class="my-4">
       <div class="text-center">
-        <p class="mb-0">&copy; 2024 Kantor Resmi. All rights reserved.</p>
+        <p class="mb-0">&copy; <span id="tahun"></span> Kantor Resmi. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -653,6 +653,11 @@
       })
     })()
   </script>
+
+  <script>
+    document.getElementById("tahun").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>
