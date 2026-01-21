@@ -74,7 +74,7 @@ html {
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500;
+  /* font-weight: 500; */
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
   position: relative;
@@ -97,18 +97,18 @@ html {
   left: 10%;
 }
 
-.theme-toggle {
+/* .theme-toggle {
   border: none;
   background: transparent;
   font-size: 1.25rem;
   padding: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s ease;
-}
+} */
 
-.theme-toggle:hover {
+/* .theme-toggle:hover {
   transform: rotate(20deg);
-}
+} */
 
 /* Mobile Theme Toggle - Pojok Bawah */
 /* #themeToggleMobile {
