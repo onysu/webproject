@@ -265,10 +265,10 @@ html {
   overflow: hidden;
 }
 
-.employee-slider .swiper-slide:hover .card {
+/* .employee-slider .swiper-slide:hover .card {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
-}
+} */
 
 .employee-slider .swiper-slide .card-img-top {
   width: 100%;
@@ -304,8 +304,8 @@ html {
 
   /* text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); */
 
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 
   line-height: 1;
 }
@@ -324,34 +324,50 @@ html {
 
 /* Modern Neon Glow Effect */
 .employee-slider .swiper-slide-active .card {
+  position: relative;
+  z-index: 10;
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
     0 0 40px rgba(212, 175, 55, 0.3),
     0 0 60px rgba(212, 175, 55, 0.2),
     inset 0 0 20px rgba(212, 175, 55, 0.1);
   border: 2px solid rgba(212, 175, 55, 0.6);
-  animation: neonPulse 2s ease-in-out infinite;
+  animation: neonPulse 2s ease-in-out infinite !important;
 }
 
 @keyframes neonPulse {
-
-  0%,
-  100% {
+  0% {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
       0 0 40px rgba(212, 175, 55, 0.3),
-      0 0 60px rgba(212, 175, 55, 0.2);
+      0 0 60px rgba(212, 175, 55, 0.2),
+      inset 0 0 20px rgba(212, 175, 55, 0.1);
     border-color: rgba(212, 175, 55, 0.6);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.7),
-      0 0 50px rgba(212, 175, 55, 0.5),
-      0 0 80px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8),
+      0 0 50px rgba(212, 175, 55, 0.6),
+      0 0 80px rgba(212, 175, 55, 0.4),
+      inset 0 0 30px rgba(212, 175, 55, 0.15);
     border-color: rgba(212, 175, 55, 0.9);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
+      0 0 40px rgba(212, 175, 55, 0.3),
+      0 0 60px rgba(212, 175, 55, 0.2),
+      inset 0 0 20px rgba(212, 175, 55, 0.1);
+    border-color: rgba(212, 175, 55, 0.6);
   }
 }
 
+/* Non-active slides */
 /* .employee-slider .swiper-slide:not(.swiper-slide-active) .card {
-  opacity: 0.65;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+} */
+
+/* .employee-slider .swiper-slide:not(.swiper-slide-active):hover .card {
+  opacity: 0.85;
 } */
 
 .employee-slider .swiper-slide .card-title {
@@ -366,14 +382,6 @@ html {
   opacity: 0.7;
   margin: 0;
 }
-
-/* .swiper-slide:not(.swiper-slide-active) .card {
-      opacity: 0.85;
-    }
-
-    .swiper-slide-active .card {
-      opacity: 1;
-    } */
 
 @media (max-width: 1399.98px) {
   .employee-slider .swiper-slide {
