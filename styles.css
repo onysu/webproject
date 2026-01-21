@@ -111,7 +111,7 @@ html {
 }
 
 /* Mobile Theme Toggle - Pojok Bawah */
-#themeToggleMobile {
+/* #themeToggleMobile {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -131,7 +131,7 @@ html {
 #themeToggleMobile:hover {
   transform: scale(1.1) rotate(20deg);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-}
+} */
 
 /* ==================== Hero Section ==================== */
 .hero-section {
