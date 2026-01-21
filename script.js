@@ -206,41 +206,41 @@ const heroBgSwiper = new Swiper('.hero-bg-slider', {
 });
 
 // Employee Slider
-const employeeSwiper = new Swiper('.employee-slider', {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
+// const employeeSwiper = new Swiper('.employee-slider', {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: "auto",
 
-  loop: true,
-  loopedSlides: 9,
+//   loop: true,
+//   loopedSlides: 9,
 
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true, // opsional tapi recommended
-  },
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: true, // opsional tapi recommended
+//   },
 
-  speed: 800,
+//   speed: 800,
 
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 80,
-    depth: 800,
-    modifier: 1,
-    slideShadows: true,
-  },
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 80,
+//     depth: 800,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
 
-  mousewheel: false, // ⚠️ penting
-  keyboard: {
-    enabled: true,
-  },
-});
+//   mousewheel: false, // ⚠️ penting
+//   keyboard: {
+//     enabled: true,
+//   },
+// });
 
 // ==================== Load Content Functions ====================
 function loadNews() {
