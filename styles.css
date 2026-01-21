@@ -87,7 +87,8 @@ html {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: red;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -95,6 +96,11 @@ html {
 .navbar-nav .nav-link.active::after {
   width: 80%;
   left: 10%;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--bs-navbar-active-color) rgba(255, 255, 255, 1);
 }
 
 /* .theme-toggle {
