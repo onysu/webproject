@@ -605,13 +605,13 @@ html {
 
 /* ==================== Section Kontak kami ==================== */
 /* Kontak Section Styles */
-.section-kontak {
+/* .section-kontak {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
+} */
 
 .contact-card {
   transition: all 0.3s ease;
-  background: white;
+  /* background: white; */
 }
 
 .contact-card:hover {
@@ -637,9 +637,9 @@ html {
   background: #f8f9fa;
 }
 
-.contact-form {
+/* .contact-form {
   background: white;
-}
+} */
 
 .contact-form .form-control {
   border-radius: 8px;
