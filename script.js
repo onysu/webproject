@@ -208,10 +208,10 @@ const heroBgSwiper = new Swiper('.hero-bg-slider', {
 // Employee Slider
 const employeeSwiper = new Swiper('.employee-slider', {
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 50,
