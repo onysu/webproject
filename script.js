@@ -157,38 +157,38 @@ window.addEventListener('scroll', function () {
 });
 
 // ==================== Dark/Light Mode Toggle ====================
-const themeToggle = document.getElementById('themeToggle');
-const themeToggleMobile = document.getElementById('themeToggleMobile');
-const html = document.documentElement;
+// const themeToggle = document.getElementById('themeToggle');
+// const themeToggleMobile = document.getElementById('themeToggleMobile');
+// const html = document.documentElement;
 
-// Check for saved theme preference or default to 'light'
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-bs-theme', currentTheme);
-updateThemeIcon(currentTheme);
+// // Check for saved theme preference or default to 'light'
+// const currentTheme = localStorage.getItem('theme') || 'light';
+// html.setAttribute('data-bs-theme', currentTheme);
+// updateThemeIcon(currentTheme);
 
-function toggleTheme() {
-  const currentTheme = html.getAttribute('data-bs-theme');
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+// function toggleTheme() {
+//   const currentTheme = html.getAttribute('data-bs-theme');
+//   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-  html.setAttribute('data-bs-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateThemeIcon(newTheme);
-}
+//   html.setAttribute('data-bs-theme', newTheme);
+//   localStorage.setItem('theme', newTheme);
+//   updateThemeIcon(newTheme);
+// }
 
-function updateThemeIcon(theme) {
-  const icon = theme === 'light' ? 'bi-moon-fill' : 'bi-sun-fill';
-  const buttons = [themeToggle, themeToggleMobile];
+// function updateThemeIcon(theme) {
+//   const icon = theme === 'light' ? 'bi-moon-fill' : 'bi-sun-fill';
+//   const buttons = [themeToggle, themeToggleMobile];
 
-  buttons.forEach(button => {
-    if (button) {
-      const iconElement = button.querySelector('i');
-      iconElement.className = `bi ${icon}`;
-    }
-  });
-}
+//   buttons.forEach(button => {
+//     if (button) {
+//       const iconElement = button.querySelector('i');
+//       iconElement.className = `bi ${icon}`;
+//     }
+//   });
+// }
 
-themeToggle.addEventListener('click', toggleTheme);
-themeToggleMobile.addEventListener('click', toggleTheme);
+// themeToggle.addEventListener('click', toggleTheme);
+// themeToggleMobile.addEventListener('click', toggleTheme);
 
 // ==================== Swiper Initialization ====================
 // Hero Background Slider
@@ -208,10 +208,10 @@ const heroBgSwiper = new Swiper('.hero-bg-slider', {
 // Employee Slider
 const employeeSwiper = new Swiper('.employee-slider', {
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false
+  // },
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 50,

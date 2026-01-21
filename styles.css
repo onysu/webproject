@@ -1,6 +1,6 @@
 /* ==================== CSS Variables ==================== */
 :root {
-  --primary-color: #0d6efd;
+  /* --primary-color: #0d6efd;
   --secondary-color: #6c757d;
   --success-color: #198754;
   --danger-color: #dc3545;
@@ -9,17 +9,16 @@
   --light-bg: #f8f9fa;
   --dark-bg: #212529;
   --text-light: #212529;
-  --text-dark: #f8f9fa;
+  --text-dark: #f8f9fa; */
   --header1-height: 33px;
-  /* --header1-height: 48px; */
   --header2-height: 70px;
 }
 
 /* Dark Mode Variables */
-[data-bs-theme="dark"] {
+/* [data-bs-theme="dark"] {
   --light-bg: #1a1d20;
   --text-light: #f8f9fa;
-}
+} */
 
 /* ==================== General Styles ==================== */
 * {
@@ -74,7 +73,7 @@ html {
   top: var(--header1-height);
   left: 0;
   right: 0;
-  background-color: var(--bs-body-bg);
+  /* background-color: var(--bs-body-bg); */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1029;
   /* transition: top 0.3s ease, box-shadow 0.3s ease; */
@@ -82,10 +81,10 @@ html {
   height: var(--header2-height);
 }
 
-[data-bs-theme="dark"] .header-2 {
+/* [data-bs-theme="dark"] .header-2 {
   background-color: #1a1d20;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
-}
+} */
 
 .header-2.sticky {
   top: 0;
@@ -237,11 +236,11 @@ html {
 
 /* Employee Slider */
 .employee-slider-container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(10px); */
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); */
 }
 
 .employee-card {
@@ -492,9 +491,9 @@ html {
   color: var(--text-dark);
 }
 
-[data-bs-theme="dark"] .footer {
+/* [data-bs-theme="dark"] .footer {
   background-color: #0d0f11;
-}
+} */
 
 .footer h5 {
   font-weight: 700;
@@ -592,9 +591,9 @@ html {
     border-radius: 0 0 8px 8px;
   }
 
-  [data-bs-theme="dark"] .navbar-collapse {
+  /* [data-bs-theme="dark"] .navbar-collapse {
     border-top-color: rgba(255, 255, 255, 0.1);
-  }
+  } */
 }
 
 @media (max-width: 767.98px) {
@@ -653,15 +652,15 @@ html {
 }
 
 /* Dark Mode Transitions */
-[data-bs-theme="dark"] .news-card,
+/* [data-bs-theme="dark"] .news-card,
 [data-bs-theme="dark"] .gallery-card,
 [data-bs-theme="dark"] .video-card {
   background-color: #1a1d20;
-}
+} */
 
-[data-bs-theme="dark"] .employee-slider-container {
+/* [data-bs-theme="dark"] .employee-slider-container {
   background: rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* ==================== Page Header ==================== */
 .page-header {
@@ -846,7 +845,7 @@ html {
 }
 
 /* ==================== Dark Mode Adjustments ==================== */
-[data-bs-theme="dark"] .info-card,
+/* [data-bs-theme="dark"] .info-card,
 [data-bs-theme="dark"] .org-card {
   background-color: #1a1d20;
 }
@@ -869,4 +868,4 @@ html {
 [data-bs-theme="dark"] .accordion-button:not(.collapsed) {
   background-color: #2a2d30;
   color: var(--bs-body-color);
-}
+} */
