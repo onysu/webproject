@@ -612,6 +612,7 @@ html {
 .contact-card {
   transition: all 0.3s ease;
   /* background: white; */
+  text-align: center;
 }
 
 .contact-card:hover {
@@ -641,11 +642,11 @@ html {
   background: white;
 } */
 
-.contact-form .form-control {
+/* .contact-form .form-control {
   border-radius: 8px;
   border: 1px solid #dee2e6;
   padding: 10px 15px;
-}
+} */
 
 .contact-form .form-control:focus {
   border-color: #0d6efd;
