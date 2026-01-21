@@ -21,7 +21,7 @@
 } */
 
 /* ==================== General Styles ==================== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   padding-top: calc(var(--header1-height) + var(--header2-height));
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -212,11 +212,37 @@ html {
 
   /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.7) 100%); */
 
-  /* Khaki gelap elegan (cinematic) */
-  background: linear-gradient(135deg,
-      rgba(95, 85, 60, 0.7),
-      rgba(60, 55, 40, 0.8));
 
+  /* Khaki aman (paling seimbang) */
+  background: linear-gradient(135deg,
+      rgba(120, 108, 80, 0.55),
+      rgba(90, 80, 55, 0.65) 100%);
+
+  /* Khaki terang (background terasa hidup) */
+  /* background: linear-gradient(135deg,
+      rgba(170, 160, 120, 0.45),
+      rgba(120, 110, 80, 0.6) 100%); */
+
+  /* Khaki gelap elegan (cinematic) */
+  /* background: linear-gradient(135deg,
+      rgba(95, 85, 60, 0.7),
+      rgba(60, 55, 40, 0.8) 100%); */
+
+  /* Khaki + blend-mode (paling natural) */
+  /* background: linear-gradient(135deg,
+      rgba(140, 130, 95, 0.6),
+      rgba(95, 85, 60, 0.7) 100%);
+  mix-blend-mode: multiply; */
+
+  /* Khaki adaptif (teks di bawah) */
+  /* background: linear-gradient(to bottom,
+      rgba(140, 130, 95, 0.3),
+      rgba(90, 80, 55, 0.75) 100%); */
+
+  /* rekomendai */
+  /* background: linear-gradient(135deg,
+      rgba(120, 108, 80, 0.55),
+      rgba(90, 80, 55, 0.65) 100%); */
 }
 
 .hero-content {
@@ -227,6 +253,7 @@ html {
   align-items: center;
   color: white;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  /* text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45); */
 }
 
 /* .hero-text h1 {
