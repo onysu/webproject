@@ -207,37 +207,38 @@ const heroBgSwiper = new Swiper('.hero-bg-slider', {
 
 // Employee Slider
 const employeeSwiper = new Swiper('.employee-slider', {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+
   loop: true,
+  loopedSlides: 9,
+
   autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
+    delay: 2500,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // opsional tapi recommended
   },
-  effect: 'coverflow',
+
+  speed: 800,
+
   coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
+    rotate: 0,
+    stretch: 80,
+    depth: 800,
     modifier: 1,
-    slideShadows: true
+    slideShadows: true,
   },
+
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true
+    el: ".swiper-pagination",
+    clickable: true,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      centeredSlides: true
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-      centeredSlides: true
-    },
-    1024: {
-      slidesPerView: 1,
-      centeredSlides: true
-    },
+
+  mousewheel: false, // ⚠️ penting
+  keyboard: {
+    enabled: true,
   },
 });
 
