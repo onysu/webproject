@@ -399,6 +399,43 @@
     </div>
   </main>
 
+  <!-- Footer -->
+  <footer class="footer py-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Kantor Resmi</h5>
+          <p>Melayani dengan sepenuh hati untuk masyarakat Indonesia yang lebih baik.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-3">Kontak</h5>
+          <p><i class="bi bi-geo-alt me-2"></i> Jakarta, Indonesia</p>
+          <p><i class="bi bi-envelope me-2"></i> info@kantor.go.id</p>
+          <p><i class="bi bi-telephone me-2"></i> (021) 1234-5678</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="mb-3">Link Cepat</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Tentang Kami</a></li>
+            <li><a href="#" class="text-decoration-none">Layanan</a></li>
+            <li><a href="#" class="text-decoration-none">Kontak</a></li>
+            <li><a href="#" class="text-decoration-none">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="mb-0">&copy; <span id="tahun"></span> Kantor Resmi. All rights reserved (Semua hak dilindungi.).</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   <!-- offcanvas-navbar.js -->
   <script>
@@ -409,6 +446,10 @@
         document.querySelector('.offcanvas-collapse').classList.toggle('open')
       })
     })()
+  </script>
+  <!-- Tahun saat ini -->
+  <script>
+    document.getElementById("tahun").textContent = new Date().getFullYear();
   </script>
 
 </body>
