@@ -211,6 +211,9 @@ const employeeSwiper = new Swiper('.employee-slider', {
 // ==================== Load Content Functions ====================
 function loadNews() {
   const newsContainer = document.getElementById('newsContainer');
+  
+  // Check if container exists before trying to populate
+  if (!newsContainer) return;
 
   newsData.forEach((news, index) => {
     const newsCard = `
@@ -239,6 +242,9 @@ function loadNews() {
 
 function loadPhotoGallery() {
   const photoContainer = document.getElementById('photoGalleryContainer');
+  
+  // Check if container exists before trying to populate
+  if (!photoContainer) return;
 
   photoGalleryData.forEach((photo, index) => {
     const photoCard = `
@@ -258,6 +264,9 @@ function loadPhotoGallery() {
 
 function loadVideoGallery() {
   const videoContainer = document.getElementById('videoGalleryContainer');
+  
+  // Check if container exists before trying to populate
+  if (!videoContainer) return;
 
   videoGalleryData.forEach((video, index) => {
     const videoCard = `

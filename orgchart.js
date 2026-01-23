@@ -1,131 +1,125 @@
-// Organizational Chart using Primitives.js jQuery plugin
+// Organizational Chart using Primitives.js
 $(document).ready(function () {
   const chartContainer = $('#orgChart');
 
-  if (chartContainer.length && typeof $.fn.orgDiagram !== 'undefined') {
-    // Check current theme
-    const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-    const isDark = currentTheme === 'dark';
+  // Define organizational structure
+  const items = [
+    {
+      id: "1",
+      parent: null,
+      title: "Dr. Ahmad Santoso, M.Si",
+      description: "Kepala Kantor"
+    },
+    {
+      id: "2",
+      parent: "1",
+      title: "Siti Nurhaliza, S.Kom",
+      description: "Sekretaris"
+    },
+    {
+      id: "3",
+      parent: "2",
+      title: "Budi Hartono, S.E",
+      description: "Kepala Bagian Keuangan"
+    },
+    {
+      id: "4",
+      parent: "2",
+      title: "Dewi Lestari, M.Pd",
+      description: "Kepala Bagian SDM"
+    },
+    {
+      id: "5",
+      parent: "2",
+      title: "Indra Gunawan, S.Sos",
+      description: "Kepala Bagian Umum"
+    },
+    {
+      id: "6",
+      parent: "3",
+      title: "Rini Supriyanto",
+      description: "Staff Keuangan - Analis"
+    },
+    {
+      id: "7",
+      parent: "3",
+      title: "Hendra Wijaya",
+      description: "Staff Keuangan - Bendahara"
+    },
+    {
+      id: "8",
+      parent: "4",
+      title: "Tina Marlina",
+      description: "Staff SDM - Rekrutmen"
+    },
+    {
+      id: "9",
+      parent: "4",
+      title: "Wito Prasetyo",
+      description: "Staff SDM - Pelatihan"
+    },
+    {
+      id: "10",
+      parent: "5",
+      title: "Maya Kusuma",
+      description: "Staff Umum - Administrasi"
+    },
+    {
+      id: "11",
+      parent: "5",
+      title: "Bambang Setiadi",
+      description: "Staff Umum - Logistik"
+    }
+  ];
 
-    // Define organizational structure - using simple array format
-    const items = [
-      {
-        id: 1,
-        parent: null,
-        title: "Dr. Ahmad Santoso, M.Si",
-        description: "Kepala Kantor",
-        image: "assets/img/Kepala.png"
-      },
-      {
-        id: 2,
-        parent: 1,
-        title: "Siti Nurhaliza, S.Kom",
-        description: "Sekretaris",
-        image: "assets/img/pegawai.png"
-      },
-      // Kepala Bagian
-      {
-        id: 3,
-        parent: 2,
-        title: "Budi Hartono, S.E",
-        description: "Kepala Bagian Keuangan",
-        image: "assets/img/pegawai.png"
-      },
-      {
-        id: 4,
-        parent: 2,
-        title: "Dewi Lestari, M.Pd",
-        description: "Kepala Bagian SDM",
-        image: "assets/img/pegawai.png"
-      },
-      {
-        id: 5,
-        parent: 2,
-        title: "Indra Gunawan, S.Sos",
-        description: "Kepala Bagian Umum",
-        image: "assets/img/pegawai.png"
-      },
-      // Staff Keuangan
-      {
-        id: 6,
-        parent: 3,
-        title: "Staff Keuangan 1",
-        description: "Analis Keuangan",
-        image: "assets/img/pegawai.png"
-      },
-      {
-        id: 7,
-        parent: 3,
-        title: "Staff Keuangan 2",
-        description: "Bendahara",
-        image: "assets/img/pegawai.png"
-      },
-      // Staff SDM
-      {
-        id: 8,
-        parent: 4,
-        title: "Staff SDM 1",
-        description: "Rekrutmen",
-        image: "assets/img/pegawai.png"
-      },
-      {
-        id: 9,
-        parent: 4,
-        title: "Staff SDM 2",
-        description: "Pelatihan",
-        image: "assets/img/pegawai.png"
-      },
-      // Staff Umum
-      {
-        id: 10,
-        parent: 5,
-        title: "Staff Umum 1",
-        description: "Administrasi",
-        image: "assets/img/pegawai.png"
-      },
-      {
-        id: 11,
-        parent: 5,
-        title: "Staff Umum 2",
-        description: "Logistik",
-        image: "assets/img/pegawai.png"
-      }
-    ];
+  // Get current theme
+  const currentTheme = document.documentElement.getAttribute('data-bs-theme') || 'light';
+  const isDark = currentTheme === 'dark';
 
+  if (chartContainer.length) {
     try {
-      // jQuery plugin configuration - using jQuery plugin syntax
+      // Initialize the org diagram
       chartContainer.orgDiagram({
         items: items,
         cursorItem: 1,
-        hasSelectorCheckbox: 0, // primitives.common.Enabled.False
-        normalLevelShift: 20,
-        dotLevelShift: 20,
-        lineLevelShift: 20,
-        normalItemsInterval: 20,
-        linesColor: isDark ? "#6c757d" : "#dee2e6",
+        hasSelectorCheckbox: false,
+        normalLevelShift: 30,
+        dotLevelShift: 30,
+        lineLevelShift: 30,
+        normalItemsInterval: 30,
+        linesColor: isDark ? "#666" : "#999",
         linesWidth: 2,
-        pageFitMode: 3, // primitives.common.PageFitMode.AutoSize
-        autoSizeMinimum: { width: 800, height: 600 }
+        enablePanning: true,
+        pageFitMode: "AutoSize",
+        autoSizeMinimum: { width: 800, height: 600 },
+        templateName: "defaultTemplate"
       });
 
-      console.log("Organizational chart initialized successfully");
-    } catch (error) {
-      console.error("Error initializing organizational chart:", error);
-      // Fallback: Show message if library fails
-      chartContainer.html('<div class="text-center p-5"><p class="text-muted">Mohon refresh halaman untuk melihat bagan organisasi</p></div>');
-    }
-  } else if (chartContainer.length) {
-    // Library not loaded - show loading or fallback
-    chartContainer.html('<div class="text-center p-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p class="mt-3 text-muted">Memuat bagan organisasi...</p></div>');
+      console.log("✓ Organizational chart initialized successfully");
 
-    // Retry after a delay
-    setTimeout(function () {
-      if (typeof $.fn.orgDiagram !== 'undefined') {
-        // If library loaded late, reload the script
-        location.reload();
-      } else {
-        chartContainer.html('<div class="text-center p-5"><p class="text-danger">Gagal memuat library. Silakan refresh halaman.</p></div>');
-      }
-    }, 3000);
+    } catch (error) {
+      console.error("✗ Error initializing chart:", error);
+      showFallback("Error loading chart. Please refresh the page.");
+    }
+  } else {
+    console.warn("Chart container not found");
   }
+
+  function showFallback(message) {
+    chartContainer.html(`
+      <div class="alert alert-warning m-5">
+        <i class="bi bi-exclamation-triangle me-2"></i>${message}
+      </div>
+    `);
+  }
+
+  // Listen for theme changes
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeButtons = document.querySelectorAll('[data-bs-theme-value]');
+    themeButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        setTimeout(() => location.reload(), 300);
+      });
+    });
+  });
 });
