@@ -208,10 +208,29 @@ const employeeSwiper = new Swiper('.employee-slider', {
   },
 });
 
+// effect-cards Swiper
+var effectcardsSwiper = new Swiper('.effect-cards', {
+  effect: "cards",
+  cardsEffect: {
+    rotate: true
+  },
+  grabCursor: true,
+  initialSlide: 2,
+  speed: 500,
+  loop: true,
+  mousewheel: {
+    invert: false
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  }
+});
+
 // ==================== Load Content Functions ====================
 function loadNews() {
   const newsContainer = document.getElementById('newsContainer');
-  
+
   // Check if container exists before trying to populate
   if (!newsContainer) return;
 
@@ -242,7 +261,7 @@ function loadNews() {
 
 function loadPhotoGallery() {
   const photoContainer = document.getElementById('photoGalleryContainer');
-  
+
   // Check if container exists before trying to populate
   if (!photoContainer) return;
 
@@ -264,7 +283,7 @@ function loadPhotoGallery() {
 
 function loadVideoGallery() {
   const videoContainer = document.getElementById('videoGalleryContainer');
-  
+
   // Check if container exists before trying to populate
   if (!videoContainer) return;
 
